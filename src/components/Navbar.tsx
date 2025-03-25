@@ -35,7 +35,7 @@ export default function Navbar() {
                 </button>
                 <img src={logo} className="h-6" />
             </div>
-            <div ref={sideRef} className={`top-0 left-0 absolute z-10 bg-slate-100 py-2 w-80 h-full duration-500 ease-out transition-transform ${menu ? "translate-x-0" : "-translate-x-full"}`}>
+            <div ref={sideRef} className={`top-0 left-0 absolute z-10 bg-slate-100 w-80 h-full duration-500 ease-out transition-transform ${menu ? "translate-x-0" : "-translate-x-full"}`}>
                 <div className="h-16 place-content-center border-b border-slate-300 px-6">
                     <img src={logo} className="h-6" />
                 </div>
