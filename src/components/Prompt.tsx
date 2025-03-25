@@ -18,7 +18,7 @@ export default function Prompt({ question, answer } : { question: String, answer
         <div>
             <div className={`flex flex-row items-center justify-between bg-slate-200 px-6 py-2.5 ${dropdown ? "rounded-t-lg" : "rounded-lg"}`}>
                 <div className="text-lg">{question}</div>
-                <div onClick={() => setDropdown(!dropdown)}>caret</div>
+                <div className="cursor-pointer" onClick={() => setDropdown(!dropdown)}>caret</div>
             </div>
             <div ref={answerRef} className="bg-slate-100 px-6 rounded-b-lg duration-500 ease-out transition-all overflow-hidden" style={{ height: `${height}px` }}>
                 <div className="text-lg py-2.5">{answer}</div>
