@@ -3,7 +3,7 @@ import Prompt from "../../../components/Prompt";
 
 export default function Support() {
     return (
-        <div className="flex flex-col px-6 sm:px-32 py-15 gap-8">
+        <div className="flex flex-col px-6 sm:px-32 gap-8">
             <div className="text-3xl font-medium text-center sm:text-left">Frequently Asked Questions</div>
             <div className="flex flex-col sm:flex-row gap-6">
                 <div className="flex flex-col gap-4 sm:max-w-1/2">
