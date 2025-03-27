@@ -1,10 +1,12 @@
 export default function Member({ image, name, title } : { image: string, name: String, title: String }) {
     return (
-        <div className="min-w-66 bg-stone-200 p-4 rounded-sm">
-            <div className="flex flex-col">
-                <img src={image} className="w-66 h-66" />
-                <div className="font-semibold mt-4">{name}</div>
-                <div className="text-sm">{title}</div>
+        <div className="w-64 h-74 bg-stone-100 rounded-xl p-10 border border-slate-200">
+            <img src={image} className="h-full" />
+            <div className="relative">
+                <div className="absolute bg-white p-2 w-60">
+                    <div>{name}</div>
+                    <div>{title}</div>
+                </div>
             </div>
         </div>
     )
