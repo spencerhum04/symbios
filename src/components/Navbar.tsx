@@ -54,8 +54,8 @@ export default function Navbar() {
                     <div className="flex flex-row items-center gap-4">
                         <Link to={"/"} className="rounded-sm hover:bg-slate-100 px-4 py-3">Home</Link>
                         <Link to={"/about"} className="rounded-sm hover:bg-slate-100 px-4 py-3">About Us</Link>
-                        <button className="rounded-sm hover:bg-slate-100 px-4 py-3">Documentation</button>
-                        <button className="rounded-sm hover:bg-slate-100 px-4 py-3">Resources</button>
+                        <Link to={"/documentation"} className="rounded-sm hover:bg-slate-100 px-4 py-3">Documentation</Link>
+                        <Link to={"/resources"} className="rounded-sm hover:bg-slate-100 px-4 py-3">Resources</Link>
                     </div>
                 </div>
                 <div className="hidden sm:block bg-slate-300 hover:bg-slate-400 px-4 py-3 rounded-xl">Get Started</div>
