@@ -75,11 +75,11 @@ export default function Form() {
             <form onSubmit={onSubmit} className="w-full place-items-center sm:place-items-start">
                 <div className="flex flex-col gap-y-4 mt-2.5 w-full">
                     <input type="email" name="email" value={formData.email} onChange={handleInputChange}
-                        className="font-semibold bg-transparent border border-navy rounded-lg p-2.5 focus:outline-none"
+                        className="font-semibold bg-white border border-navy rounded-lg p-2.5 focus:outline-none"
                         placeholder="Enter email address"
                     />
                     <textarea name="message" value={formData.message} onChange={handleInputChange}
-                        className="font-semibold bg-transparent border border-navy h-40 rounded-lg p-2.5 focus:outline-none"
+                        className="font-semibold bg-white border border-navy h-40 rounded-lg p-2.5 focus:outline-none"
                         placeholder="Enter your message here"
                     ></textarea>
                     {error && <div className="text-red-600 text-sm">{error}</div>}
