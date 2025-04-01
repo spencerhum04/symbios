@@ -13,6 +13,8 @@ export default function() {
                 <Member image={model} name={"Other Man"} title={"CFO"} />
                 <Member image={model} name={"Logo Man"} title={"CEO"} />
                 <Member image={model} name={"Other Man"} title={"CFO"} />
+                <Member image={model} name={"Logo Man"} title={"CEO"} />
+                <Member image={model} name={"Other Man"} title={"CFO"} />
             </div>
         </div>
     )
