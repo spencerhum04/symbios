@@ -13,6 +13,7 @@ export default function Navbar() {
         { name: "About", path: "/about" },
         { name: "Documentation", path: "/documentation" },
         { name: "Resources", path: "/resources" },
+        { name: "Contact", path: "/contact" },
     ]
 
     useEffect(() => {
@@ -41,24 +42,25 @@ export default function Navbar() {
 
     return (
         <>
-            <div className="flex flex-row items-center justify-between w-full px-6 sm:px-32 py-2 h-16">
+            <div className="bg-neutral-900 text-white flex flex-row items-center justify-between w-full px-6 sm:px-32 py-2 h-12">
                 <div className="flex flex-row gap-x-2 items-center">
                     <button className={`sm:hidden w-[48px] h-[48px] rounded-lg flex flex-col justify-between px-4 py-4.5`} onClick={() => {setMenu(true)}}>
-                        <span className="w-full h-0.5 bg-black"></span>
-                        <span className="w-full h-0.5 bg-black"></span>
-                        <span className="w-full h-0.5 bg-black"></span>
+                        <span className="w-full h-0.5 bg-white"></span>
+                        <span className="w-full h-0.5 bg-white"></span>
+                        <span className="w-full h-0.5 bg-white"></span>
                     </button>
-                    <img src={logo} className="h-6" />
+                    <img src={logo} className="h-5" />
                 </div>
                 <div className="hidden sm:block">
-                    <div className="flex flex-row items-center gap-4">
-                        <Link to={"/"} className="rounded-sm hover:bg-slate-100 px-4 py-3">Home</Link>
-                        <Link to={"/about"} className="rounded-sm hover:bg-slate-100 px-4 py-3">About Us</Link>
-                        <Link to={"/documentation"} className="rounded-sm hover:bg-slate-100 px-4 py-3">Documentation</Link>
-                        <Link to={"/resources"} className="rounded-sm hover:bg-slate-100 px-4 py-3">Resources</Link>
+                    <div className="flex flex-row items-center gap-10">
+                        {tabs.map(({ name, path }) => (
+                            <Link key={name} to={path} className="text-xs text-neutral-300 rounded-sm hover:text-white">
+                                {name}
+                            </Link>
+                        ))}
                     </div>
                 </div>
-                <div className="hidden sm:block bg-slate-300 hover:bg-slate-400 px-4 py-3 rounded-xl">Get Started</div>
+                <div className="text-black hidden sm:block bg-slate-300 hover:bg-slate-400 px-3 py-1.5 text-xs rounded-xl">Get Started</div>
             </div>
 
             <div ref={sideRef} className={`top-0 left-0 absolute z-10 bg-stone-200 w-80 h-full duration-500 ease-out transition-transform ${menu ? "translate-x-0" : "-translate-x-full"}`}>
