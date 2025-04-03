@@ -13,6 +13,7 @@ export default function Navbar() {
         { name: "About", path: "/about" },
         { name: "Documentation", path: "/documentation" },
         { name: "Resources", path: "/resources" },
+        { name: "Contact", path: "/contact" },
     ]
 
     useEffect(() => {
@@ -41,33 +42,37 @@ export default function Navbar() {
 
     return (
         <>
-            <div className="flex flex-row items-center justify-between w-full px-6 sm:px-32 py-2 h-16">
-                <div className="flex flex-row gap-x-2 items-center">
-                    <button className={`sm:hidden w-[48px] h-[48px] rounded-lg flex flex-col justify-between px-4 py-4.5`} onClick={() => {setMenu(true)}}>
-                        <span className="w-full h-0.5 bg-black"></span>
-                        <span className="w-full h-0.5 bg-black"></span>
-                        <span className="w-full h-0.5 bg-black"></span>
+            <div className="bg-neutral-900 text-white flex flex-row items-center justify-between w-full px-6 sm:px-32 py-2 h-12">
+                <div className="flex flex-row items-center justify-between w-full sm:w-25">
+                    <img src={logo} className="h-5" />
+                    <button className={`sm:hidden w-[16px] h-[12px] rounded-lg flex flex-col justify-between`} onClick={() => {setMenu(true)}}>
+                        <span className="w-full h-0.5 bg-white"></span>
+                        <span className="w-full h-0.5 bg-white"></span>
+                        <span className="w-full h-0.5 bg-white"></span>
                     </button>
-                    <img src={logo} className="h-6" />
                 </div>
                 <div className="hidden sm:block">
-                    <div className="flex flex-row items-center gap-4">
-                        <Link to={"/"} className="rounded-sm hover:bg-slate-100 px-4 py-3">Home</Link>
-                        <Link to={"/about"} className="rounded-sm hover:bg-slate-100 px-4 py-3">About Us</Link>
-                        <Link to={"/documentation"} className="rounded-sm hover:bg-slate-100 px-4 py-3">Documentation</Link>
-                        <Link to={"/resources"} className="rounded-sm hover:bg-slate-100 px-4 py-3">Resources</Link>
+                    <div className="flex flex-row items-center gap-10">
+                        {tabs.map(({ name, path }) => (
+                            <Link key={name} to={path} className={`text-xs text-neutral-300 rounded-sm hover:text-white ${focus === name ? "text-white" : "text-neutral-300"}`} onClick={() => setFocus(name)}>
+                                {name}
+                            </Link>
+                        ))}
                     </div>
                 </div>
-                <div className="hidden sm:block bg-slate-300 hover:bg-slate-400 px-4 py-3 rounded-xl">Get Started</div>
+                <div className="text-black hidden sm:block bg-slate-200 hover:bg-slate-100 px-3 py-1.5 text-xs rounded-xl">Get Started</div>
             </div>
 
-            <div ref={sideRef} className={`top-0 left-0 absolute z-10 bg-stone-200 w-80 h-full duration-500 ease-out transition-transform ${menu ? "translate-x-0" : "-translate-x-full"}`}>
-                <div className="h-16 place-content-center border-b border-slate-300 px-6">
-                    <img src={logo} className="h-6" />
+            <div ref={sideRef} className={`top-0 left-0 absolute z-10 bg-neutral-900 w-full duration-500 ease-out transition-transform ${menu ? "translate-y-0" : "-translate-y-full"}`}>
+                <div className="flex flex-row items-center justify-between w-full px-6 pt-4">
+                    <img src={logo} className="h-5" />
+                    <button className={`sm:hidden w-[20px] h-[20px] rounded-lg flex flex-col justify-between`} onClick={() => {setMenu(false)}}>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" viewBox="0 0 256 256"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path></svg>
+                    </button>
                 </div>
                 <div className="flex flex-col py-6 pr-4">
                     {tabs.map(({ name, path }) => (
-                        <Link key={name} to={path} className={`h-12 place-content-center px-6 font-medium rounded-r-full cursor-pointer transition-colors ${focus === name ? "bg-stone-300" : ""}`} onClick={() => setFocus(name)}>
+                        <Link key={name} to={path} className={`h-12 text-white place-content-center px-6 font-medium rounded-r-full cursor-pointer transition-colors ${focus === name ? "bg-neutral-800" : ""}`} onClick={() => setFocus(name)}>
                             {name}
                         </Link>
                     ))}
