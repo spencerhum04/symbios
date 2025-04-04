@@ -8,7 +8,7 @@ import Support from "./sections/support";
 export default function Landing() {
     return (
         <>
-            <div className="w-full fixed z-50">
+            <div className="w-full fixed z-50 opacity-95">
                 <Navbar />
             </div>
             <div className="flex flex-col gap-15 pb-20">
