@@ -17,7 +17,7 @@ export default function Footer() {
     return (
         <div className="w-full px-6 py-4">
             <div className="bg-neutral-800 text-white rounded-xl flex flex-col gap-10 px-12 py-10">
-                <div className="flex flex-row justify-between">
+                <div className="grid grid-cols-3 gap-x-4 gap-y-8 sm:flex sm:flex-row sm:justify-between">
                     <FooterColumn title="Product" items={product} />
                     <FooterColumn title="Product" items={product} />
                     <FooterColumn title="Product" items={product} />
@@ -27,7 +27,7 @@ export default function Footer() {
                 </div>
                 <div className="flex flex-row items-center justify-between">
                     <img src={logo} className="h-5" />
-                    <div className="text-neutral-300 text-xs text-center">Copyright 2025 Symbios Bio-Suite. All rights reserved.</div>
+                    <div className="text-neutral-300 text-xs text-end">Copyright 2025 Symbios Bio-Suite. All rights reserved.</div>
                 </div>
             </div>
         </div>
