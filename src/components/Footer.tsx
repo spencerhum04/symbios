@@ -16,7 +16,7 @@ const social = [
 export default function Footer() {
     return (
         <div className="w-full px-6 py-4">
-            <div className="bg-neutral-800 text-white rounded-xl flex flex-col gap-10 p-10">
+            <div className="bg-neutral-800 text-white rounded-xl flex flex-col gap-10 px-12 py-10">
                 <div className="flex flex-row justify-between">
                     <FooterColumn title="Product" items={product} />
                     <FooterColumn title="Product" items={product} />
