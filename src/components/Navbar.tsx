@@ -42,7 +42,7 @@ export default function Navbar() {
 
     return (
         <>
-            <div className="bg-neutral-900 text-white flex flex-row items-center justify-between w-full px-6 sm:px-32 py-2 h-12">
+            <div className="bg-neutral-900 text-white flex flex-row items-center justify-between w-full px-6 sm:px-32 py-2 h-16">
                 <div className="flex flex-row items-center justify-between w-full sm:w-25">
                     <img src={logo} className="h-5" />
                     <button className={`sm:hidden w-[16px] h-[12px] rounded-lg flex flex-col justify-between`} onClick={() => {setMenu(true)}}>
@@ -72,7 +72,7 @@ export default function Navbar() {
                 </div>
                 <div className="flex flex-col py-6 pr-4">
                     {tabs.map(({ name, path }) => (
-                        <Link key={name} to={path} className={`h-12 text-white place-content-center px-6 font-medium rounded-r-full cursor-pointer transition-colors ${focus === name ? "bg-neutral-800" : ""}`} onClick={() => setFocus(name)}>
+                        <Link key={name} to={path} className={`h-16 text-white place-content-center px-6 font-medium rounded-r-full cursor-pointer transition-colors ${focus === name ? "bg-neutral-800" : ""}`} onClick={() => setFocus(name)}>
                             {name}
                         </Link>
                     ))}
