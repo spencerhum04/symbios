@@ -34,3 +34,33 @@
 .reveal-blur-delay-3 {
     animation-delay: 1s;
 }
+
+.reveal-blur-delay-4 {
+    animation-delay: 2s;
+}
+
+@keyframes image-fade-blur {
+    0% {
+      opacity: 0;
+      filter: blur(20px);
+      transform: scale(1.05);
+    }
+    100% {
+      opacity: 1;
+      filter: blur(0px);
+      transform: scale(1);
+    }
+}
+
+.mech-reveal {
+    animation: image-fade-blur 1.5s ease-out forwards;
+    mask-image: 
+        linear-gradient(to top, transparent 0%, black 20%, black 80%, transparent 100%),
+        linear-gradient(to left, transparent 0%, black 20%, black 80%, transparent 100%);
+    mask-composite: intersect;
+    -webkit-mask-image: 
+        linear-gradient(to top, transparent 0%, black 20%, black 80%, transparent 100%),
+        linear-gradient(to left, transparent 0%, black 20%, black 80%, transparent 100%);
+    -webkit-mask-composite: destination-in;
+}
+  
