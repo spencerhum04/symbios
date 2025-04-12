@@ -41,7 +41,7 @@ export default function Navbar() {
     }, [menu]);
 
     return (
-        <div className="bg-neutral-900 w-full h-16 px-6 place-content-center">
+        <div className="bg-dark w-full h-16 px-6 place-content-center border-b border-neutral-800">
             <div className="flex flex-row items-center justify-between max-w-[1024px] w-full mx-auto">
                 <div className="flex flex-row items-center justify-between w-full sm:w-25">
                     <img src={logo} className="h-5" />
@@ -54,13 +54,13 @@ export default function Navbar() {
                 <div className="hidden sm:block">
                     <div className="flex flex-row items-center gap-10">
                         {tabs.map(({ name, path }) => (
-                            <Link key={name} to={path} className={`text-sm font-medium rounded-sm ${focus === name ? "text-white" : "text-sand"}`} onClick={() => setFocus(name)}>
+                            <Link key={name} to={path} className={`text-sm font-medium rounded-sm ${focus === name ? "text-sand" : "text-stone"}`} onClick={() => setFocus(name)}>
                                 {name}
                             </Link>
                         ))}
                     </div>
                 </div>
-                <div className="text-black hidden sm:block bg-sand hover:bg-slate-100 text-sm font-medium rounded-xl px-3 py-2">Get Started</div>
+                <div className="text-black hidden sm:block bg-sand hover:bg-white text-sm font-medium rounded-xl px-3 py-2">Get Started</div>
             </div>
 
             <div ref={sideRef} className={`top-0 left-0 absolute z-10 bg-neutral-900 w-full duration-500 ease-out transition-transform ${menu ? "translate-y-0" : "-translate-y-full"}`}>
