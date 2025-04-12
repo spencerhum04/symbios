@@ -1,0 +1,36 @@
+@keyframes reveal-blur {
+    0% {
+      opacity: 0;
+      filter: blur(8px);
+      transform: translateY(2px);
+      visibility: hidden;
+    }
+    1% {
+      visibility: visible;
+    }
+    100% {
+      opacity: 1;
+      filter: blur(0);
+      transform: translateY(0);
+      visibility: visible;
+    }
+}   
+  
+.reveal-blur {
+    opacity: 0;
+    visibility: hidden;
+    animation: reveal-blur 1s ease-out forwards;
+}
+
+
+.reveal-blur-delay-1 {
+    animation-delay: 0.5s;
+}
+
+.reveal-blur-delay-2 {
+    animation-delay: 0.8s;
+}
+
+.reveal-blur-delay-3 {
+    animation-delay: 1s;
+}
