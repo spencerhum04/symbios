@@ -8,6 +8,12 @@ const product = [
     { name: "Releases   " },
 ]
 
+const company = [
+    { name: "About Us" },
+    { name: "News" },
+    { name: "Contact" },
+]
+
 const social = [
     { name: "LinkedIn" },
     { name: "GitHub" },
@@ -19,7 +25,7 @@ export default function Footer() {
             <div className="bg-neutral-800 text-white rounded-xl flex flex-col gap-10 px-12 py-10">
                 <div className="grid grid-cols-3 gap-x-4 gap-y-8 sm:grid-cols-6">
                     <FooterColumn title="Product" items={product} />
-                    <FooterColumn title="Product" items={product} />
+                    <FooterColumn title="Company" items={company} />
                     <FooterColumn title="Product" items={product} />
                     <FooterColumn title="Product" items={product} />
                     <FooterColumn title="Product" items={product} />

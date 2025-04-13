@@ -1,10 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import "tailwindcss";
 
+@theme {
+  --color-sand: #E6E6E6;
+  --color-stone: #8A8F98;
+  --color-dark: #121212;
+  --color-neutral: #1D1D1E
+}
+
 :root {
-  color-scheme: light dark;
-  color: black;
-  background-color: #F7F5F2;
+  color-scheme: dark;
+  color: #E6E6E6;
+  background-color: transparent;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

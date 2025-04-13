@@ -41,8 +41,8 @@ export default function Navbar() {
     }, [menu]);
 
     return (
-        <>
-            <div className="bg-neutral-900 text-white flex flex-row items-center justify-between w-full px-6 sm:px-32 py-2 h-12">
+        <div className="bg-dark w-full h-16 px-6 place-content-center border-b border-neutral-800">
+            <div className="flex flex-row items-center justify-between max-w-[1024px] w-full mx-auto">
                 <div className="flex flex-row items-center justify-between w-full sm:w-25">
                     <img src={logo} className="h-5" />
                     <button className={`sm:hidden w-[16px] h-[12px] rounded-lg flex flex-col justify-between`} onClick={() => {setMenu(true)}}>
@@ -52,15 +52,15 @@ export default function Navbar() {
                     </button>
                 </div>
                 <div className="hidden sm:block">
-                    <div className="flex flex-row items-center gap-10">
+                    <div className="flex flex-row items-center gap-2">
                         {tabs.map(({ name, path }) => (
-                            <Link key={name} to={path} className={`text-xs text-neutral-300 rounded-sm hover:text-white ${focus === name ? "text-white" : "text-neutral-300"}`} onClick={() => setFocus(name)}>
+                            <Link key={name} to={path} className={`text-[13px] font-medium rounded-sm hover:bg-neutral rounded-xl px-3 py-1.5 ${focus === name ? "text-sand" : "text-stone"}`} onClick={() => setFocus(name)}>
                                 {name}
                             </Link>
                         ))}
                     </div>
                 </div>
-                <div className="text-black hidden sm:block bg-slate-200 hover:bg-slate-100 px-3 py-1.5 text-xs rounded-xl">Get Started</div>
+                <div className="text-black hidden sm:block bg-sand hover:bg-white text-sm font-medium rounded-xl px-3 py-2">Get Started</div>
             </div>
 
             <div ref={sideRef} className={`top-0 left-0 absolute z-10 bg-neutral-900 w-full duration-500 ease-out transition-transform ${menu ? "translate-y-0" : "-translate-y-full"}`}>
@@ -72,12 +72,12 @@ export default function Navbar() {
                 </div>
                 <div className="flex flex-col py-6 pr-4">
                     {tabs.map(({ name, path }) => (
-                        <Link key={name} to={path} className={`h-12 text-white place-content-center px-6 font-medium rounded-r-full cursor-pointer transition-colors ${focus === name ? "bg-neutral-800" : ""}`} onClick={() => setFocus(name)}>
+                        <Link key={name} to={path} className={`h-16 place-content-center px-6 font-medium rounded-r-full cursor-pointer transition-colors ${focus === name ? "bg-neutral-800" : ""}`} onClick={() => setFocus(name)}>
                             {name}
                         </Link>
                     ))}
                 </div>
             </div>
-        </>
+        </div>
     )
 }
