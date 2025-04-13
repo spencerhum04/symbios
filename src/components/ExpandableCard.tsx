@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function ExpandableCard({ image, title, body } : { image: string, title: String, body: String }) {
+export default function ExpandableCard({ image, title } : { image: string, title: String }) {
 
     const [hovered, setHovered] = useState(false);
 
