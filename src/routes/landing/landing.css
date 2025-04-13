@@ -24,19 +24,19 @@
 
 
 .reveal-blur-delay-1 {
-    animation-delay: 0.5s;
+    animation-delay: 0.25s;
 }
 
 .reveal-blur-delay-2 {
-    animation-delay: 0.8s;
+    animation-delay: 0.5s;
 }
 
 .reveal-blur-delay-3 {
-    animation-delay: 1s;
+    animation-delay: 0.6s;
 }
 
 .reveal-blur-delay-4 {
-    animation-delay: 2s;
+    animation-delay: 1.4s;
 }
 
 @keyframes image-fade-blur {
