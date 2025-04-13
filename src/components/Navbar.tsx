@@ -54,7 +54,7 @@ export default function Navbar() {
                 <div className="hidden sm:block">
                     <div className="flex flex-row items-center gap-2">
                         {tabs.map(({ name, path }) => (
-                            <Link key={name} to={path} className={`text-[13px] font-medium rounded-sm hover:bg-neutral rounded-xl px-3 py-1.5 ${focus === name ? "text-sand" : "text-stone"}`} onClick={() => setFocus(name)}>
+                            <Link key={name} to={path} className={`text-[13px] font-medium rounded-sm hover:bg-neutral hover:text-sand rounded-xl px-3 py-1.5 ${focus === name ? "text-sand" : "text-stone"}`} onClick={() => setFocus(name)}>
                                 {name}
                             </Link>
                         ))}

@@ -10,7 +10,7 @@ export default function Hero() {
                 <div className="flex flex-col sm:flex-row items-center gap-4">
                     <div className="text-black bg-sand hover:bg-white text-sm font-medium rounded-xl px-4 py-2.5 reveal-blur reveal-blur-delay-2">Start building</div>
                     <div className="flex flex-row items-center rounded-xl hover:bg-neutral gap-x-1.5 px-4 py-2.5 reveal-blur reveal-blur-delay-3">
-                        <div className="text-stone text-sm font-medium bg-gradient-to-r from-sand to-stone bg-clip-text text-transparent">Browse Our Prosthetics</div>
+                        <div className="text-stone text-sm font-medium bg-gradient-to-r from-sand to-stone bg-clip-text text-transparent">Browse Our Products</div>
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#8a8f98" viewBox="0 0 256 256"><path d="M184.49,136.49l-80,80a12,12,0,0,1-17-17L159,128,87.51,56.49a12,12,0,1,1,17-17l80,80A12,12,0,0,1,184.49,136.49Z"></path></svg>
                     </div>
                 </div>
