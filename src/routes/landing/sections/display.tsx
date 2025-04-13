@@ -1,5 +1,7 @@
 import Card from "../../../components/Card";
 import model from "../../../assets/model.png"
+import ExpandableCard from "../../../components/ExpandableCard";
+import arm from "../../../assets/arm.png";
 
 export default function Display() {
     return (
@@ -9,6 +11,11 @@ export default function Display() {
                 <Card image={model} title={"Title"} body={"Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum"} />
                 <Card image={model} title={"Title"} body={"Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum"} />
                 <Card image={model} title={"Title"} body={"Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum"} />
+            </div>
+            <div className="flex flex-row items-center justify-between overflow-hidden">
+                <ExpandableCard image={arm} title={"Purpose-built for product development"} body={"Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum"} />
+                <ExpandableCard image={arm} title={"Designed to move fast"} body={"Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum"} />
+                <ExpandableCard image={arm} title={"Crafted to perfection"} body={"Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum"} />
             </div>
         </div>
     )
