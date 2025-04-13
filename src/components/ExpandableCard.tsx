@@ -5,7 +5,7 @@ export default function ExpandableCard({ image, title } : { image: string, title
     const [hovered, setHovered] = useState(false);
 
     return (
-        <div className="relative w-84 h-90 bg-black rounded-xl px-6 py-8" onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
+        <div className="relative w-full min-w-84 max-w-84 h-90 bg-black rounded-xl px-6 py-8 text-left" onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
             {hovered && (
                 <div className="absolute inset-4 rounded-xl bg-neutral-800/30 backdrop-blur-md transition-all duration-300" />
             )}

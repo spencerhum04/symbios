@@ -4,7 +4,7 @@ import mech from "../../../assets/mech.png";
 export default function Hero() {
     return (
         <>
-            <div className="flex flex-col pt-18 max-w-[1024px] w-full mx-auto gap-8 text-center sm:text-left z-10">
+            <div className="flex flex-col pt-8 sm:pt-18 max-w-[1024px] w-full mx-auto gap-8 text-center sm:text-left z-10">
                 <div className="text-4xl sm:text-6xl w-full font-medium reveal-blur">Redefining the Future of Prosthetics</div>
                 <div className="max-w-175 text-xl w-full font-medium reveal-blur reveal-blur-delay-1">Combining biomimicry, soft materials, and 3D printing, our student-driven initiative is making advanced prosthetics more accessible than ever.</div>
                 <div className="flex flex-col sm:flex-row items-center gap-4">
