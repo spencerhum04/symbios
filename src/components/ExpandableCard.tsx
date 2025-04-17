@@ -29,20 +29,25 @@ export default function ExpandableCard({ image, title } : { image: string, title
             <AnimatePresence>
                 {open && (
                     <motion.div key="modal" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm" onClick={() => setOpen(false)}>
-                        <motion.div layoutId={`card-${title}`} className="bg-black text-white w-full max-w-3xl h-[75vh] rounded-2xl p-10 relative" onClick={(e) => e.stopPropagation()}>
-                            <button onClick={() => setOpen(false)} className="absolute group top-4 right-4 cursor-pointer">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#8a8f98" viewBox="0 0 256 256" className="block group-hover:hidden"><path d="M165.66,101.66,139.31,128l26.35,26.34a8,8,0,0,1-11.32,11.32L128,139.31l-26.34,26.35a8,8,0,0,1-11.32-11.32L116.69,128,90.34,101.66a8,8,0,0,1,11.32-11.32L128,116.69l26.34-26.35a8,8,0,0,1,11.32,11.32ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"></path></svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#8a8f98" viewBox="0 0 256 256" className="hidden group-hover:block"><path d="M224,128a96,96,0,1,1-96-96A96,96,0,0,1,224,128Z" opacity="0.2"></path><path d="M165.66,101.66,139.31,128l26.35,26.34a8,8,0,0,1-11.32,11.32L128,139.31l-26.34,26.35a8,8,0,0,1-11.32-11.32L116.69,128,90.34,101.66a8,8,0,0,1,11.32-11.32L128,116.69l26.34-26.35a8,8,0,0,1,11.32,11.32ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"></path></svg>
-                            </button>
-                            <motion.img layoutId={`image-${title}`} src={image} className="w-full max-h-30 object-cover rounded-xl mb-6 opacity-60" />
-                            <motion.div layoutId={`title-${title}`} className="text-5xl font-medium mb-4">{title}</motion.div>
-                            <p className="text-stone font-medium mb-2">
-                                This is expanded content. You can add images, text, and whatever
-                                else you want here.
-                            </p>
-                            <p className="text-neutral-400">
-                                You can make this section scrollable, add rich visuals, or animate individual parts using Framer Motion too.
-                            </p>
+                        <motion.div layoutId={`card-${title}`} className="bg-black text-white w-full max-w-4xl h-full sm:h-[calc(100vh-4rem)] rounded-t-2xl p-10 relative overflow-y-auto sm:mt-16" onClick={(e) => e.stopPropagation()}>
+                            <div className="sm:px-40">
+                                <button onClick={() => setOpen(false)} className="absolute group top-4 right-4 cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#8a8f98" viewBox="0 0 256 256" className="block group-hover:hidden"><path d="M165.66,101.66,139.31,128l26.35,26.34a8,8,0,0,1-11.32,11.32L128,139.31l-26.34,26.35a8,8,0,0,1-11.32-11.32L116.69,128,90.34,101.66a8,8,0,0,1,11.32-11.32L128,116.69l26.34-26.35a8,8,0,0,1,11.32,11.32ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"></path></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#8a8f98" viewBox="0 0 256 256" className="hidden group-hover:block"><path d="M224,128a96,96,0,1,1-96-96A96,96,0,0,1,224,128Z" opacity="0.2"></path><path d="M165.66,101.66,139.31,128l26.35,26.34a8,8,0,0,1-11.32,11.32L128,139.31l-26.34,26.35a8,8,0,0,1-11.32-11.32L116.69,128,90.34,101.66a8,8,0,0,1,11.32-11.32L128,116.69l26.34-26.35a8,8,0,0,1,11.32,11.32ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"></path></svg>
+                                </button>
+                                <motion.img layoutId={`image-${title}`} src={image} className="w-full max-h-80 object-cover rounded-xl mb-6 opacity-60" />
+                                <motion.div layoutId={`title-${title}`} className="text-5xl font-medium mb-10">{title}</motion.div>
+                                <div className="flex flex-col gap-6 text-stone font-medium">
+                                    <div>Linear was developed with a specific purpose: to empower product teams to do their best work. Every aspect is intentionally designed to help teams focus on what they do best: Planning, building, and shipping great products.</div>
+                                    <div>Because of its fit-to-purpose design, Linear is incredibly easy to use, but grows more powerful as you scale. It’s opinionated where it needs to be, but provides enough flexibility to adapt to your team’s unique way of working.</div>
+                                    <div>We believe that this approach creates a better way to build products. And more than 10,000 product teams around the globe – from early-stage startups to public companies – agree.</div>
+                                </div>
+                                <div className="flex flex-col gap-6 text-stone font-medium">
+                                    <div>Linear was developed with a specific purpose: to empower product teams to do their best work. Every aspect is intentionally designed to help teams focus on what they do best: Planning, building, and shipping great products.</div>
+                                    <div>Because of its fit-to-purpose design, Linear is incredibly easy to use, but grows more powerful as you scale. It’s opinionated where it needs to be, but provides enough flexibility to adapt to your team’s unique way of working.</div>
+                                    <div>We believe that this approach creates a better way to build products. And more than 10,000 product teams around the globe – from early-stage startups to public companies – agree.</div>
+                                </div>
+                            </div>
                         </motion.div>
                     </motion.div>
                 )}

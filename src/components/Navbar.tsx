@@ -60,7 +60,7 @@ export default function Navbar() {
                         ))}
                     </div>
                 </div>
-                <div className="text-black hidden sm:block bg-sand hover:bg-white text-sm font-medium rounded-xl px-3 py-2">Get Started</div>
+                <div className="text-black hidden sm:block bg-sand hover:bg-white text-[13px] font-medium rounded-lg px-3 py-1.5">Sign Up</div>
             </div>
 
             <div ref={sideRef} className={`top-0 left-0 absolute z-10 bg-neutral-900 w-full duration-500 ease-out transition-transform ${menu ? "translate-y-0" : "-translate-y-full"}`}>
