@@ -16,7 +16,7 @@ export default function Prompt({ question, answer } : { question: String, answer
 
     return (
         <div>
-            <div className={`flex flex-row items-center justify-between bg-slate-200 px-6 py-2.5 ${dropdown ? "rounded-t-lg" : "rounded-lg"}`}>
+            <div className={`flex flex-row items-center justify-between bg-neutral-800 px-6 py-2.5 ${dropdown ? "rounded-t-lg" : "rounded-lg"}`}>
                 <div className="text-sm">{question}</div>
                 <div className="cursor-pointer" onClick={() => setDropdown(!dropdown)}>
                     {!dropdown ? (
@@ -27,7 +27,7 @@ export default function Prompt({ question, answer } : { question: String, answer
                     }
                 </div>
             </div>
-            <div ref={answerRef} className="bg-slate-300 px-6 rounded-b-lg duration-500 ease-out transition-all overflow-hidden" style={{ height: `${height}px` }}>
+            <div ref={answerRef} className="bg-neutral-700 px-6 rounded-b-lg duration-500 ease-out transition-all overflow-hidden" style={{ height: `${height}px` }}>
                 <div className="text-sm py-2.5">{answer}</div>
             </div>
         </div>
