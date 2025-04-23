@@ -11,10 +11,9 @@ export default function Landing() {
             <div className="w-full fixed z-50">
                 <Navbar />
             </div>
-            <div className="flex flex-col gap-15 py-20">
+            <div className="flex flex-col gap-40 py-20">
                 <div className="px-6 sm:px-0">
                     <Hero />
-                    <Overview />
                 </div>
                 <div className="pl-6 sm:px-0">
                     <Display />
