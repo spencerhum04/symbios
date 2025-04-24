@@ -14,7 +14,8 @@ const company = [
     { name: "Contact" },
 ]
 
-const social = [
+const connect = [
+    { name: "Contact us" },
     { name: "LinkedIn" },
     { name: "GitHub" },
 ]
@@ -29,7 +30,7 @@ export default function Footer() {
                     <FooterColumn title="Company" items={company} />
                     <FooterColumn title="Product" items={product} />
                     <FooterColumn title="Product" items={product} />
-                    <FooterColumn title="Social" items={social} />
+                    <FooterColumn title="Connect" items={connect} />
                 </div>
             </div>
         </div>
