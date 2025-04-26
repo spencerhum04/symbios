@@ -9,7 +9,7 @@ export default function Contact() {
                 <Navbar />
             </div>
             <div className="flex flex-col gap-40 py-20">
-                <div className="px-6 sm:px-0">
+                <div className="px-6 sm:px-0 pt-16">
                     <Hero />
                 </div>
             </div>
