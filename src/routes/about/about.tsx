@@ -9,7 +9,7 @@ export default function About() {
             <div className="w-full fixed z-50">
                 <Navbar />
             </div>
-            <div className="flex flex-col gap-15 pt-32 pb-20 max-w-[1280px] mx-auto">
+            <div className="flex flex-col gap-15 pt-32 pb-20 max-w-[1024px] mx-auto">
                 <Introduction />
                 <Team />
             </div>
